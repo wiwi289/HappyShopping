@@ -1,0 +1,1 @@
+D:\AndroidStudio4.1\HappyShopping\buildSrc\build\classes\kotlin\main\Dependencies.class;D:\AndroidStudio4.1\HappyShopping\buildSrc\build\classes\kotlin\main\Deploy.class;D:\AndroidStudio4.1\HappyShopping\buildSrc\build\classes\kotlin\main\PluginAssemble.class;D:\AndroidStudio4.1\HappyShopping\buildSrc\build\classes\kotlin\main\VersionAssemble.class
