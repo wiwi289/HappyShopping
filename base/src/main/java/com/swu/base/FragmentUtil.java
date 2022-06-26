@@ -7,15 +7,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-/**
- * @ClassName FragmentUtil
- * @Author zhangJun
- * @Date 2022/1/11 1:22 下午
- * @Description 使用说明
- * 在activity中初始化 FragmentUtil
- * 如下：FragmentUtil mFragmentUtil = new FragmentUtil(R.id.btm_container).bind(mActivity);
- *
- */
 public class FragmentUtil {
     // fragmentactivity 继承自activity，用来解决android3.0 之前没有fragment的api 用法和activity一样不用纠结
     private FragmentUtil() {

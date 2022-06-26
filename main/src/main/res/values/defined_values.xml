@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PhoneClearInputTextView">
+        <attr name="verifyMode" format="boolean|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="PwdRegisterPanel">
+        <attr name="sure_btn_text" format="reference|string"/>
+    </declare-styleable>
+
+</resources>

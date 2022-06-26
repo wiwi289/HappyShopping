@@ -1,8 +1,7 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
+    id(PluginAssemble.pluginAndroidId)
+    id(PluginAssemble.pluginAndroid)
 }
-
 android {
     compileSdkVersion(VersionAssemble.compileSdkVersion)
     buildToolsVersion(VersionAssemble.buildToolsVersion)
@@ -14,14 +13,15 @@ android {
         versionCode = VersionAssemble.versionCode
         versionName = VersionAssemble.versionName
 
+        multiDexEnabled = true
     }
 
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
             )
         }
     }
@@ -32,13 +32,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures.viewBinding = true
 }
 
 dependencies {
-
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.3.72")
-    implementation("androidx.core:core-ktx:1.2.0")
-    implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("com.google.android.material:material:1.1.0")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    if (Deploy.isDebugMode) {
+        implementation(project(":common"))
+    } else {
+        implementation(project(":launch"))
+    }
 }
+

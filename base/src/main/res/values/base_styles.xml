@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="BaseDialog" parent="android:Theme.Dialog">
-<!--        背景颜色及透明程度-->
-        <item name="android:windowBackground">@android:color/transparent</item>
-<!--        Dialog是否半透明-->
-        <item name="android:windowIsTranslucent">false</item>
-<!--        是否去除标题-->
-        <item name="android:windowNoTitle">true</item>
-<!--        Dailog是否浮动/移动-->
-        <item name="android:windowIsFloating">false</item>
-<!--        弹出Dialog时，是否变暗背景-->
-        <item name="android:backgroundDimEnabled">true</item>
+    <!--        背景颜色及透明程度-->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <!--        Dialog是否半透明-->
+    <item name="android:windowIsTranslucent">false</item>
+    <!--        是否去除标题-->
+    <item name="android:windowNoTitle">true</item>
+    <!--        Dailog是否浮动/移动-->
+    <item name="android:windowIsFloating">false</item>
+    <!--        弹出Dialog时，是否变暗背景-->
+    <item name="android:backgroundDimEnabled">true</item>
     </style>
+
+    <style name="li_dialog_default" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/li_dialog_default_show</item>  <!--显示动画-->
+        <item name="android:windowExitAnimation">@anim/li_dialog_default_cancel</item> <!--消失动画-->
+    </style>
+
+    <style name="li_dialog_scale" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/li_dialog_scale_show</item>  <!--显示动画-->
+        <item name="android:windowExitAnimation">@anim/li_dialog_scale_cancel</item> <!--消失动画-->
+    </style>
+
+    <style name="li_dialog_translate_bottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/li_dialog_translate_bottom_show</item>
+        <item name="android:windowExitAnimation">@anim/li_dialog_translate_bottom_cancel</item>
+    </style>
+
+    <style name="li_dialog_translate_left" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/li_dialog_translate_left_show</item>
+        <item name="android:windowExitAnimation">@anim/li_dialog_translate_left_cancel</item>
+    </style>
+
+    <style name="li_dialog_translate_right" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/li_dialog_translate_right_show</item>
+        <item name="android:windowExitAnimation">@anim/li_dialog_translate_right_cancel</item>
+    </style>
+
+    <style name="li_dialog_translate_top" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/li_dialog_translate_top_show</item>
+        <item name="android:windowExitAnimation">@anim/li_dialog_translate_top_cancel</item>
+    </style>
+
+
+
 </resources>

@@ -1,13 +1,7 @@
-if (Deploy.isDebugMode) {
-    apply(plugin = PluginAssemble.pluginAndroidId)
-    apply(plugin = PluginAssemble.pluginAndroid)
-} else {
-    if (project.name == "app") {
-        apply(plugin = PluginAssemble.pluginAndroidId)
-        apply(plugin = PluginAssemble.pluginAndroid)
-    } else {
-        apply(plugin = PluginAssemble.pluginLibraryId)
-    }
+
+plugins {
+    id(if (Deploy.isDebugMode) PluginAssemble.pluginAndroidId else PluginAssemble.pluginLibraryId)
+    id(PluginAssemble.pluginAndroid)
 }
 
 android {
@@ -20,7 +14,6 @@ android {
         targetSdkVersion(VersionAssemble.targetSdkVersion)
         versionCode = VersionAssemble.versionCode
         versionName = VersionAssemble.versionName
-
     }
 
     buildTypes {
@@ -38,6 +31,16 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    sourceSets {
+        getByName("main") {
+            if (Deploy.isDebugMode) {
+                manifest.srcFile("src/main/module/AndroidManifest.xml")
+            } else {
+                manifest.srcFile("src/main/AndroidManifest.xml")
+            }
+        }
     }
 }
 

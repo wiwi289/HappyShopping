@@ -1,5 +1,4 @@
 package com.swu.base
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,10 +13,10 @@ import com.swu.lib_base.R
  * Created by chenxiong
  * date 11/26/21
  */
-abstract class BaseFragment<VIEW : ViewBinding>: Fragment() {
-    private var _binding: VIEW? = null
-    val binding:VIEW get() = _binding!!
-//    private var jumpListener: FragmentJumpListener? = null
+abstract class BaseFragment(): Fragment() {
+
+    protected abstract val binding: ViewBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initData()
@@ -28,9 +27,6 @@ abstract class BaseFragment<VIEW : ViewBinding>: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = inflateBindingWithGeneric(layoutInflater, container, false)
-        binding.root.isClickable = true
-        binding.root.setBackgroundColor(Color.WHITE)
         return binding.root
     }
 
@@ -38,16 +34,12 @@ abstract class BaseFragment<VIEW : ViewBinding>: Fragment() {
         super.onActivityCreated(savedInstanceState)
         //将Fragment大小设置为屏幕大小减去底部导航栏大小
         setRealSize()
-        initViews()
+        init()
         initListener()
     }
 
     protected open fun setRealSize(){
 
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     protected fun jumpToFragment(fragment: Fragment, @AnimatorRes @AnimRes inAnim: Int) {
@@ -60,7 +52,7 @@ abstract class BaseFragment<VIEW : ViewBinding>: Fragment() {
 //        this.jumpListener = jumpListener
 //    }
 
-    abstract fun initViews()
+    abstract fun init()
 
     protected open fun initData() {}
 

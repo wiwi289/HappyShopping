@@ -32,6 +32,13 @@
     <color name="go_pay_discount">#FFFFFF</color>
 
     <!-- 个人资料页面-->
-    <color name="data_back_gray">#B5b5b5</color>
-    <color name="data_back_black">#383838</color>
+    <color name="back_gray">#B5b5b5</color>
+    <color name="back_black">#383838</color>
+
+    <color name="smoke_white">#F5F5F5</color>
+    <color name="jump_btn_bg">#373737</color>
+    <color name="btn_orange">#EE8332</color>
+    <color name="check_box_red">#70FF4949</color>
+    <color name="text_orange">#EE7B4D</color>
+    <color name="text_blue">#3A7CF5</color>
 </resources>

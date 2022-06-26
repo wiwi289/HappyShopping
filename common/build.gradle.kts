@@ -35,4 +35,5 @@ android {
 
 dependencies {
     api(project(":base"))
+    implementation(kotlin("reflect"))
 }

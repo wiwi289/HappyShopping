@@ -4,14 +4,14 @@ import java.util.*
 
 object VersionAssemble {
 
-    const val kotlinVersion = "1.4.32"
+    const val kotlinVersion = "1.5.21"
     const val gradleVersion = "4.1.0"
 
     //SDK版本
     const val compileSdkVersion = 31
     const val buildToolsVersion = "30.0.3"
     const val applicationId = "com.swu.happyshopping"
-    const val minSdkVersion = 16
+    const val minSdkVersion = 21
     const val targetSdkVersion = 31
 
     //版本
@@ -30,24 +30,18 @@ object PluginAssemble {
 
 object Dependencies {
 
-    val thirdPartyDependencies = mapOf<String, String>(
+    val thirdPartyDependencies = mapOf(
             "Kotlin_Stdlib" to "org.jetbrains.kotlin:kotlin-stdlib:${VersionAssemble.kotlinVersion}",
-            "Kotlin_Core_Ktx" to "androidx.core:core-ktx:1.3.0",
+            "Core_Kts" to "androidx.core:core-ktx:1.3.2",
             "Appcompat" to "androidx.appcompat:appcompat:1.1.0",
             "Constraint_Layout" to "androidx.constraintlayout:constraintlayout:1.1.3",
             "Recyclerview" to "androidx.recyclerview:recyclerview:1.1.0",
+            "MaterialDesign" to "com.google.android.material:material:1.3.0",
             "GSon" to "com.google.code.gson:gson:2.8.5",
-            "Converter_Gson" to "com.squareup.retrofit2:converter-gson:2.4.0",
-            //导入Rxjava
-            // 此处一定要注意使用RxJava2的版本
             "Rxjava" to "io.reactivex.rxjava2:rxjava:2.2.10",
             "RxAndroid" to "io.reactivex.rxjava2:rxandroid:2.1.1",
-            // 衔接 Retrofit & RxJava
-            // 此处一定要注意使用RxJava2的版本
-            "Retrofit2_Rxjava2_Adapter" to "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
             "OkHttp" to "com.squareup.okhttp3:okhttp:4.8.1",
             "OkIo" to "com.squareup.okio:okio:2.7.0",
-            "Retrofit" to "com.squareup.retrofit2:retrofit:2.4.0",
             // 导入MMKV
             "MMkv" to "com.tencent:mmkv:1.0.10",
             //底部导航栏
@@ -64,8 +58,11 @@ object Dependencies {
             "LoadSir" to "com.kingja.loadsir:loadsir:1.3.6",
             "SmartRefresh" to "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",
             "Lottie" to "com.airbnb.android:lottie:2.8.0",
-            "Coroutine_Core" to "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7",
-            "Coroutine_Android" to "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7"
+            "Coroutine_Android" to "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1",
+            "LifeCycle" to "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1",
+            "ViewModel" to "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1",
+            "Palette" to "androidx.palette:palette:1.0.0",
+            "LDialog" to "com.github.liys666666:LDialog:V2.1.0"
     )
 
 }

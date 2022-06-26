@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_somke_white_corner_bg">
+        <TextView
+            android:id="@+id/loginByFace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="人脸识别登录"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textColor="@color/text_blue"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+        <TextView
+            android:id="@+id/resetPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textColor="@color/text_blue"
+            android:background="@drawable/round_corner_bg"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:text="取消"
+        android:background="@drawable/round_somke_white_corner_bg"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_blue"/>
+</LinearLayout>

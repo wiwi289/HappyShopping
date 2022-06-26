@@ -1,3 +1,4 @@
+include(":main")
 include(":app")
 include(":base")
 include(":common")

@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.swu._main.fragment.RegisterFragment"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingLeft="3dp"
+        android:paddingTop="3dp"
+        android:paddingRight="1dp"
+        android:paddingBottom="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/back_arrow_24" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎注册欢乐购"
+            android:textColor="@color/black"
+            android:textSize="30dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已有欢乐购账号?"/>
+            <TextView
+                android:id="@+id/quickLoginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即登录"
+                android:textColor="@color/text_orange"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.swu._main.widget.PwdRegisterPanel
+        android:id="@+id/registerPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="-10dp"
+        app:sure_btn_text="注册"/>
+
+</FrameLayout>

@@ -42,10 +42,15 @@ object UIUtils {
 
     fun getInputMethodManager() = BaseApplication.getContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
+
 }
 
 inline fun <reified T: ViewGroup.LayoutParams> View.updateLayoutParams(block: T.() -> Unit) {
     val params = layoutParams as T
     block(params)
     layoutParams = params
+}
+
+fun String.show() {
+    Toast.makeText(BaseApplication.getContext(), this, Toast.LENGTH_SHORT).show()
 }
