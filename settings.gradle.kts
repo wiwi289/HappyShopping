@@ -1,3 +1,4 @@
+include(":feed")
 include(":main")
 include(":app")
 include(":base")

@@ -15,6 +15,8 @@ abstract class BaseViewModel(
 
         fun getMContext() = context
 
+        fun getFrController() = fragmentController
+
         fun startFragment(fragment: Fragment, @AnimatorRes @AnimRes inAnim: Int? = null) = fragmentController.startFragment(fragment, inAnim)
 
         fun switchFragment(fromFragment: Fragment, toFragment: Fragment,  @AnimatorRes @AnimRes inAnim: Int? = null) =

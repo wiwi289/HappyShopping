@@ -36,4 +36,8 @@
     <string name="keep_title_bar">keep title bar</string>
     <string name="fine_no_data">fine, no data.</string>
     <string name="click_me_to_retry">click me to retry!</string>
+    <string name="home_title">主页</string>
+    <string name="message_title">消息</string>
+    <string name="shop_cart_title">购物车</string>
+    <string name="mine_title">我的</string>
 </resources>

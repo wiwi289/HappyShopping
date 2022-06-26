@@ -16,13 +16,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyShopping">
-        <activity android:name=".activity.NavigationActivity"></activity>
-        <activity android:name=".activity.LaunchActivity">
+        <activity android:name=".activity.NavigationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.LaunchActivity">
+
         </activity>
 
         <provider

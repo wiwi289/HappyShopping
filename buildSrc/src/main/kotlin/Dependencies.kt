@@ -33,7 +33,8 @@ object Dependencies {
     val thirdPartyDependencies = mapOf(
             "Kotlin_Stdlib" to "org.jetbrains.kotlin:kotlin-stdlib:${VersionAssemble.kotlinVersion}",
             "Core_Kts" to "androidx.core:core-ktx:1.3.2",
-            "Appcompat" to "androidx.appcompat:appcompat:1.1.0",
+            "Appcompat" to "androidx.appcompat:appcompat:1.4.2",
+            "AndroidX_Legacy" to "androidx.legacy:legacy-support-v4:1.0.0",
             "Constraint_Layout" to "androidx.constraintlayout:constraintlayout:1.1.3",
             "Recyclerview" to "androidx.recyclerview:recyclerview:1.1.0",
             "MaterialDesign" to "com.google.android.material:material:1.3.0",
