@@ -80,10 +80,10 @@ class LoginFragment(private val viewModel: MainViewModel) : BaseFragment(), Defi
     }
 
     private fun checkLogin(bombUserResp: BombUserResp) {
-        if (binding.loginPanel.checkPwd(bombUserResp.getUser().pwd))
+        if (binding.loginPanel.checkPwd(bombUserResp.getUser().pwd)){
             // 跳转至主Activity
             "登录成功!".show()
-        else
-            "密码错误，请重新输入!!!".show()
+            DefinedEventController.dispatchEvent(LoginEventConstants.JumpLaunchToNavigation)
+        } else "密码错误，请重新输入!!!".show()
     }
 }

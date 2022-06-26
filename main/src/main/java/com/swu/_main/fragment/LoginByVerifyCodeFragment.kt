@@ -6,10 +6,12 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.viewModelScope
 import com.swu._main.MainViewModel
 import com.swu._main.R
+import com.swu._main.constants.LoginEventConstants
 import com.swu._main.databinding.FragmentLoginByVerifyCodeBinding
 import com.swu.base.BaseFragment
 import com.swu.base.show
 import com.swu.base.viewBinding
+import com.swu.common.defined_event_bus.DefinedEventController
 import com.swu.common.util.BombMsg
 import io.reactivex.Observable
 import io.reactivex.ObservableOnSubscribe
@@ -79,13 +81,10 @@ class LoginByVerifyCodeFragment(private val viewModel: MainViewModel) : BaseFrag
                     "用户不存在，请检查账号输入是否有误!!!".show()
                 } else {
                     "登录成功".show()
-                    jumpToMainPage()
+                    DefinedEventController.dispatchEvent(LoginEventConstants.JumpLaunchToNavigation)
                 }
             }
         }
     }
 
-    private fun jumpToMainPage() {
-
-    }
 }

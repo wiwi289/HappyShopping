@@ -7,4 +7,7 @@ object LoginEventConstants {
     val ResetUserPwd = "reset_user_pwd"
 
     val RegisterUser = "register_user"
+
+    val JumpLaunchToNavigation = "jump_launch_to_navigation"
+
 }

@@ -1,6 +1,8 @@
-package com.swu._main
+package com.swu._main.activity
 
 import androidx.lifecycle.ViewModelProvider
+import com.swu._main.MainViewModel
+import com.swu._main.constants.LoginEventConstants
 import com.swu._main.databinding.ActivityLaunchBinding
 import com.swu._main.fragment.*
 //import com.swu._main.fragment.AdFragment
@@ -8,8 +10,10 @@ import com.swu.base.BaseActivity
 import com.swu.base.FragmentController
 import com.swu.base.viewBinding
 import com.swu.base.view_model.BaseViewModelFactory
+import com.swu.common.defined_event_bus.DefinedEventCallBack
+import com.swu.common.defined_event_bus.DefinedEventController
 
-class LaunchActivity : BaseActivity() {
+class LaunchActivity : BaseActivity(), DefinedEventCallBack {
 
     override val binding: ActivityLaunchBinding by viewBinding(ActivityLaunchBinding::inflate)
 
@@ -26,6 +30,7 @@ class LaunchActivity : BaseActivity() {
     }
 
     override fun initListener() {
+        DefinedEventController.registerCallBack(LoginEventConstants.JumpLaunchToNavigation, callBack = this)
 //        mainViewModel.startFragment(AdFragment(mainViewModel))
         mainViewModel.startFragment(LoginFragment(mainViewModel))
 //        mainViewModel.startFragment(RegisterFragment(mainViewModel))
@@ -38,6 +43,12 @@ class LaunchActivity : BaseActivity() {
             finish()
         } else {
             supportFragmentManager.popBackStack()
+        }
+    }
+
+    override fun onEventChange(event: String, res: Any?) {
+        when(event) {
+            LoginEventConstants.JumpLaunchToNavigation -> startActivityAndFinish<NavigationActivity>()
         }
     }
 
