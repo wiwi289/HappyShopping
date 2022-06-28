@@ -3,8 +3,8 @@ package com.swu._main.fragment
 import android.annotation.SuppressLint
 import com.swu._main.MainViewModel
 import com.swu._main.R
-import com.swu._main.constants.BombMethodConstants
-import com.swu._main.constants.LoginEventConstants
+import com.swu.common.constants.BombMethodConstants
+import com.swu.common.constants.LoginEventConstants
 import com.swu._main.databinding.FragmentResetPwdBinding
 import com.swu.base.BaseFragment
 import com.swu.base.show

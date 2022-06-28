@@ -16,15 +16,13 @@
             app:expandedTitleGravity="right|bottom"
             app:layout_scrollFlags="scroll|enterAlwaysCollapsed|exitUntilCollapsed|snap"
             app:paddingEnd="24dp"
-            app:title="Hello"
             app:collapsedTitleGravity="right"
             app:contentScrim="@color/btn_orange"
             >
-            <ImageView
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pic5"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.7"/>
 
@@ -33,7 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:title="test"/>
+                app:menu="@menu/feed_tool_bar_search_menu"
+                />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.core.widget.NestedScrollView
@@ -41,9 +40,133 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text"/>
+            android:orientation="vertical"
+            android:background="@color/smoke_white"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/feed_page_round_corner_bg">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp">
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryClothes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/clothes"
+                        app:item_title="衣服"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryComputer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/computer"
+                        app:item_title="电脑"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryCup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/cup"
+                        app:item_title="水杯"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categorySnack"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/snack"
+                        app:item_title="小吃"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryWatch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/watch"
+                        app:item_title="手表"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp">
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryTrousers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/trousers"
+                        app:item_title="裤子"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryShoe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/shoe"
+                        app:item_title="男鞋"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categorySkinCare"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/skin_care"
+                        app:item_title="护肤品"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryBook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/book"
+                        app:item_title="书籍"/>
+                    <com.swu.feed.widget.CategoryItem
+                        android:id="@+id/categoryBag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:item_pic="@drawable/bag"
+                        app:item_title="背包"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/feedRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/feed_page_round_corner_bg"
+                android:visibility="invisible"/>
+
+            <scut.carson_ho.kawaii_loadingview.Kawaii_LoadingView
+                android:id="@+id/loadingView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#10ffffff"
+                app:blockColor="@color/btn_orange"
+                app:lineNumber="3"
+                app:fixBlock_Angle="5"
+                app:moveBlock_Angle="20"
+                app:blockInterval="5dp"
+                app:half_BlockWidth="10dp"
+                app:isClock_Wise="false"
+                app:moveSpeed="500"
+                app:move_Interpolator="@android:anim/bounce_interpolator"/>
+        </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

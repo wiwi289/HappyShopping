@@ -44,4 +44,12 @@ class NavigationActivity : BaseActivity() {
             .setFirstSelectedPosition(0)
             .initialise()
     }
+
+    override fun onBackPressed() {
+        if (supportFragmentManager.backStackEntryCount == 1) {
+            finish()
+        } else {
+            supportFragmentManager.popBackStack()
+        }
+    }
 }

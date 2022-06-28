@@ -1,4 +1,4 @@
-package com.swu._main.constants
+package com.swu.common.constants
 
 object LoginEventConstants {
 

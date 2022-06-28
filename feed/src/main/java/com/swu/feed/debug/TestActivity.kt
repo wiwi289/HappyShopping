@@ -3,7 +3,7 @@ package com.swu.feed.debug
 import androidx.lifecycle.ViewModelProvider
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
-import com.swu._main.view_model.FeedViewModel
+import com.swu.feed.view_model.FeedViewModel
 import com.swu.base.BaseActivity
 import com.swu.base.FragmentController
 import com.swu.base.viewBinding
@@ -59,4 +59,11 @@ class TestActivity : BaseActivity() {
             .initialise()
     }
 
+    override fun onBackPressed() {
+        if (supportFragmentManager.backStackEntryCount == 1) {
+            finish()
+        } else {
+            supportFragmentManager.popBackStack()
+        }
+    }
 }

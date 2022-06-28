@@ -63,7 +63,10 @@ object Dependencies {
             "LifeCycle" to "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1",
             "ViewModel" to "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1",
             "Palette" to "androidx.palette:palette:1.0.0",
-            "LDialog" to "com.github.liys666666:LDialog:V2.1.0"
+            "LDialog" to "com.github.liys666666:LDialog:V2.1.0",
+            "Banner" to "io.github.youth5201314:banner:2.2.2",
+            "LoadingView" to "com.carson_ho:Kawaii_LoadingView:1.0.0",
+            "ShimmerLayout" to "io.supercharge:shimmerlayout:2.1.0"
     )
 
 }

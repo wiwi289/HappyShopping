@@ -24,10 +24,10 @@ abstract class BaseRequest<T>(private val dataType: Type) {
     }
 
     suspend fun await(): T? {
-        if (requestName.isNullOrEmpty() || apiParam == null) {
+        if (requestName.isNullOrEmpty()) {
             return null
         }
-        return AsyncCustomEndpoints().await<T>(requestName!!, apiParam!!, dataType)
+        return AsyncCustomEndpoints().await<T>(requestName!!, apiParam ?: ApiParam(), dataType)
     }
 
     // 不需返回值的请求

@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.viewModelScope
 import com.swu._main.MainViewModel
 import com.swu._main.R
-import com.swu._main.constants.LoginEventConstants
+import com.swu.common.constants.LoginEventConstants
 import com.swu._main.databinding.FragmentLoginByVerifyCodeBinding
 import com.swu.base.BaseFragment
 import com.swu.base.show

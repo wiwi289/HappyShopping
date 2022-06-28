@@ -2,7 +2,7 @@ package com.swu._main.activity
 
 import androidx.lifecycle.ViewModelProvider
 import com.swu._main.MainViewModel
-import com.swu._main.constants.LoginEventConstants
+import com.swu.common.constants.LoginEventConstants
 import com.swu._main.databinding.ActivityLaunchBinding
 import com.swu._main.fragment.*
 //import com.swu._main.fragment.AdFragment

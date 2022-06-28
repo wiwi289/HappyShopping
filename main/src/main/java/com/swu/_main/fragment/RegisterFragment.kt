@@ -3,10 +3,9 @@ package com.swu._main.fragment
 import android.annotation.SuppressLint
 import com.swu._main.MainViewModel
 import com.swu._main.R
-import com.swu._main.constants.LoginEventConstants
+import com.swu.common.constants.LoginEventConstants
 import com.swu._main.databinding.FragmentRegisterBinding
 import com.swu.base.BaseFragment
-import com.swu.base.FragmentController
 import com.swu.base.show
 import com.swu.base.viewBinding
 import com.swu.common.defined_event_bus.DefinedEventCallBack

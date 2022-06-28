@@ -4,6 +4,7 @@ buildscript {
     repositories {
         maven(url = "http://maven.aliyun.com/nexus/content/groups/public/")
         maven(url = "https://jitpack.io")
+        maven(url = "https://s01.oss.sonatype.org/content/groups/public")
         google()
         jcenter()
     }
@@ -19,6 +20,7 @@ allprojects {
     repositories {
         maven(url = "http://maven.aliyun.com/nexus/content/groups/public/")
         maven(url = "https://jitpack.io")
+        maven(url = "https://s01.oss.sonatype.org/content/groups/public")
         google()
         jcenter()
     }

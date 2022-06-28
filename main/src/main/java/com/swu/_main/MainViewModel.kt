@@ -7,8 +7,8 @@ import cn.bmob.v3.AsyncCustomEndpoints
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.CloudCodeListener
 import com.swu._main.bean.BombUserResp
-import com.swu._main.constants.BombMethodConstants
-import com.swu._main.constants.LoginEventConstants
+import com.swu.common.constants.BombMethodConstants
+import com.swu.common.constants.LoginEventConstants
 import com.swu.base.FragmentController
 import com.swu.base.show
 import com.swu.base.view_model.BaseViewModel

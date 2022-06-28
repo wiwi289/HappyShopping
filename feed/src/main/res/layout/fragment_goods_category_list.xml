@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.GoodsCategoryListFragment"
+    android:orientation="vertical"
+    android:background="@color/smoke_white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <at.markushi.ui.CircleButton
+            android:id="@+id/back_btn"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_margin="15dp"
+            app:cb_color="#12666666"
+            app:cb_pressedRingWidth="0dip"
+            android:src="@drawable/back_down_arrow_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门商品分类"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rvContainer"
+            android:visibility="invisible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_left_menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_right_menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <scut.carson_ho.kawaii_loadingview.Kawaii_LoadingView
+        android:id="@+id/loadingView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="-450dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#10ffffff"
+        app:blockColor="@color/btn_orange"
+        app:lineNumber="3"
+        app:fixBlock_Angle="5"
+        app:moveBlock_Angle="20"
+        app:blockInterval="5dp"
+        app:half_BlockWidth="10dp"
+        app:isClock_Wise="false"
+        app:moveSpeed="500"
+        app:move_Interpolator="@android:anim/bounce_interpolator"/>
+</LinearLayout>
