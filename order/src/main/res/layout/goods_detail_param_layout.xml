@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/goods_detail_module_bg"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+    <TextView
+        android:id="@+id/tvDispatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发货"
+        android:layout_marginEnd="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+    <LinearLayout
+        android:id="@+id/addressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvDispatch"
+        android:layout_toEndOf="@id/tvDispatch">
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="福建福州"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快递：免运费"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_arrow_forward_gray_24"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:id="@+id/tvMockAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="配送至：重庆市 荣昌区 昌元街道"
+        android:layout_below="@id/addressContainer"
+        android:layout_alignStart="@id/addressContainer"
+        />
+    <TextView
+        android:id="@+id/tvAssure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保障"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvMockAddress"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="假一赔四·破损包退·上门取退·极速退款"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/tvAssure"
+        android:layout_alignBottom="@id/tvAssure"
+        android:layout_alignLeft="@id/tvMockAddress"/>
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_arrow_forward_gray_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tvAssure"
+        android:layout_alignBottom="@id/tvAssure"/>
+    <TextView
+        android:id="@+id/tvParam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="参数"
+        android:layout_below="@id/tvAssure"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="品牌 型号..."
+        android:layout_alignTop="@id/tvParam"
+        android:layout_alignBottom="@id/tvParam"
+        android:layout_alignLeft="@id/tvMockAddress"/>
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_arrow_forward_gray_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tvParam"
+        android:layout_alignBottom="@id/tvParam"/>
+</RelativeLayout>

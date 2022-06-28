@@ -13,4 +13,6 @@ object BombMethodConstants {
     val GetAllDeatilGoods = "GetAllDeatilGoods"
 
     val GetAllFeedHotGoods = "GetAllFeedHotGoods"
+
+    val GetDetailGoodsInfo = "GetDetailGoodsInfo"
 }

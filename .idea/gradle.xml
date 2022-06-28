@@ -17,6 +17,9 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/feed" />
             <option value="$PROJECT_DIR$/main" />
+            <option value="$PROJECT_DIR$/message" />
+            <option value="$PROJECT_DIR$/mine" />
+            <option value="$PROJECT_DIR$/order" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
